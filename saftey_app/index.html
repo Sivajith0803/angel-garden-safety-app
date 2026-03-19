@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardian Angel App</title>
+    <!-- Link to Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to Google Fonts for 'Inter' -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link to your custom CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-purple-100 via-blue-100 to-pink-100 min-h-screen flex items-center justify-center p-4">
+    <div class="app-container">
+        <h1 class="text-4xl font-extrabold text-gray-900 mb-4 drop-shadow-sm">
+            <i class="fas fa-shield-alt text-purple-600 mr-3"></i>Guardian Angel
+        </h1>
+        <p class="text-gray-600 mb-8 text-lg">Your safety, our priority. Press the button in emergencies.</p>
+
+        <button id="sosButton" class="sos-button">
+            <span class="button-text">SOS</span>
+            <span class="button-icon"><i class="fas fa-exclamation-triangle"></i></span>
+        </button>
+
+        <div id="messageBox" class="message-box hidden"></div>
+
+        <div class="contact-section">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-5 flex items-center justify-center">
+                <i class="fas fa-users mr-2 text-blue-500"></i>Emergency Contacts
+            </h2>
+            <div class="flex flex-col md:flex-row gap-3 mb-5">
+                <input type="text" id="contactName" placeholder="Contact Name" class="contact-input flex-grow">
+                <input type="text" id="contactNumber" placeholder="Phone Number or Email" class="contact-input flex-grow">
+                <button id="addContactBtn" class="add-contact-btn flex-shrink-0">
+                    <i class="fas fa-plus mr-2"></i>Add Contact
+                </button>
+            </div>
+            <div id="contactList" class="contact-list">
+                <!-- Contacts will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to your custom JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
